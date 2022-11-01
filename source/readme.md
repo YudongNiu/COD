@@ -1,11 +1,44 @@
 # Discover Your Characteristic Community from Graph Hierarchical Communities
 
-Running code
+Build HIMOR-Index
 -------
-To run the code for COD problem, just execute the following command on linux:
+To build the HIMOR-Index for our COD problem, execute the following command on linux:
 
 ```sh
-python3 COD.py dataset linkage K cpr loc indexed
+python3 himor.py dataset
+```
+
+The parameter "dataset" denotes the name of your network.
+
+Running code
+-------
+To run the code for COD problem, execute the following command on linux:
+
+```sh
+python3 COD.py dataset labeled K cpr loc indexed
+```
+
+**There are 6 parameters:**
+* dataset: the name of your network
+* labeled: if node labels are considered
+* K: the query node is top-K influential
+* cpr: if compressed COD framework is used
+* loc: if lore algorithm is used
+* indexed: if the HIMOR-index is used
+
+For example, the following commands performs the corresponding algorithms in our experiments on dataset cora.
+
+```sh
+python3 COD.py cora 1 5 1 1 1
+# CODL
+python3 COD.py cora 1 5 1 1 0
+# CODL-
+python3 COD.py cora 1 5 1 0 0
+# CODR
+python3 COD.py cora 1 5 0 0 0
+# Independent
+python3 COD.py cora 0 5 0 0 0
+# CODU
 ```
 
 
