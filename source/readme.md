@@ -26,7 +26,7 @@ python3 COD.py dataset labeled K cpr loc indexed
 * loc: if lore algorithm is used
 * indexed: if the HIMOR-index is used
 
-For example, the following commands performs the corresponding algorithms in our experiments on dataset cora.
+For example, following commands perform the corresponding algorithms in our experiments on dataset cora with the requirement that the quer node is top-5 influential in the result charateristic community.
 
 ```sh
 python3 COD.py cora 1 5 1 1 1
