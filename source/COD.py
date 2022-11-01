@@ -110,11 +110,16 @@ def ocs_ic_prop_n(g, qn, K, c_indicator):
 
 if __name__ == "__main__":
     dataset = sys.argv[1]
-    linkage = sys.argv[2]
+    labeled = int(sys.argv[2])
     K = int(sys.argv[3])
     cpr = int(sys.argv[4])  # compress
     loc = int(sys.argv[5])  # if local recluster over $C_\ell$
     indexed = int(sys.argv[6])  # if use the himor index
+
+    if labeled == 0:
+        linkage = 'unlabel'
+    else:
+        linkage = 'label_edge'
 
     # Load Graph
     path = 'labeled_graph/' + dataset + '/' + dataset
