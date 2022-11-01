@@ -11,7 +11,7 @@ import lore
 import himor
 
 
-NUM_RRSET = 10
+theta = 10
 
 
 def ocs_ic_cpr_prop_n(g, qn, K, c_indicator):
@@ -21,7 +21,7 @@ def ocs_ic_cpr_prop_n(g, qn, K, c_indicator):
     for rrsource in g:
         if c_indicator[rrsource] < 0:
             pass
-        for _ in range(NUM_RRSET):
+        for _ in range(theta):
             new_active = [rrsource]
             activated_levels[rrsource] = c_indicator[rrsource]
             activated_nodes = [rrsource]
@@ -79,7 +79,7 @@ def ocs_ic_prop_n(g, qn, K, c_indicator):
 
         activated = [False for _ in range(g.number_of_nodes())]
         for rrsource in candidates:
-            for _ in range(NUM_RRSET):
+            for _ in range(theta):
                 new_active = [rrsource]
                 activated[rrsource] = True
                 activated_nodes = [rrsource]

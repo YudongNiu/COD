@@ -43,7 +43,7 @@ def influence_pairs_cpr_prop_n(g, agglom_nodes, agglom_tree, tn_level, infs):
             rrsource_ancs.add(temp_p)
             temp_p = agglom_tree[temp_p]
 
-        for _ in range(hus.NUM_RRSET):
+        for _ in range(hus.theta):
             new_active = [rrsource]
             activated_levels[rrsource] = tn_level[agglom_nodes[rrsource]] - tn_level[tn]
             activated_nodes = [rrsource]
@@ -112,7 +112,7 @@ def rub_cpr_prop_n(g, agglom_nodes, agglom_tree, top_down_tree, leaf_inner_indic
         ranks = DupRank(sort_com)
 
         for n in ranks:
-            n_inf = infs[n][tn_level[temp_tn]] / hus.NUM_RRSET
+            n_inf = infs[n][tn_level[temp_tn]] / hus.theta
             if len(index[n]) == 0:
                 index[n].append([temp_tn, ranks[n], n_inf])
             else:
@@ -141,7 +141,7 @@ def rub_cpr_prop_n(g, agglom_nodes, agglom_tree, top_down_tree, leaf_inner_indic
                 f.write(str(index_item[0]) + ',' + str(index_item[1]) + ',' + str(index_item[2]) + ' ')
             f.write('\n')
         f.write("# index_time:" + str(indexing_time) + '\n')
-        f.write("# RRSET_NUM:" + str(hus.NUM_RRSET) + '\n')
+        f.write("# RRSET_NUM:" + str(hus.theta) + '\n')
 
 
 # *******************
