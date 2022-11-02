@@ -45,8 +45,8 @@ python3 COD.py cora 0 5 0 0 0
 Input Files
 -----------
 **The program COD.py requires 3 input files:**
-* dataset.txt: edge list of your network
-* dataset.feat: node labels
-* dataset.query_nodes: COD queries
+* dataset.txt stores edge list of your network. Each row in the file denote an edge for the network.
+* dataset.feat stores node labels of your network. Row i records the labels of node $v_i$.
+* dataset.query_nodes : COD queries. Each row represents a query. The first item is the query node and the second item is the query label.
 
 All the input files should be placed under the folder labeled_graph/dataset/.
