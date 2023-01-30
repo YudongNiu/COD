@@ -1,4 +1,4 @@
-# Discover Your Characteristic Community from Graph Hierarchical Communities
+# Characteristic Community Discovery on Attributed Graphs
 
 Build HIMOR-Index
 -------
