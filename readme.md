@@ -1,4 +1,4 @@
-# Characteristic Community Discovery on Attributed Graphs
+# Idio-Community Discovery on Attributed Graphs
 
 Build HIMOR-Index
 -------
